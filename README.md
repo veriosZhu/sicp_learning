@@ -2,7 +2,7 @@
 
 ## 课程网站
 
-https://mitpress.mit.edu/sites/default/files/sicp/index.html，可以下载到教材及源码等。
+[mitpress.mit.edu](https://mitpress.mit.edu/sites/default/files/sicp/index.html)，可以下载到教材及源码等。
 
 ## 安装 scheme
 
