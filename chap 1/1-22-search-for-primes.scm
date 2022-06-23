@@ -1,0 +1,22 @@
+(load "fast-prime.scm")
+
+(define (next-odd? n)
+  if (odd? n)
+      (+ n 2)
+      (+ n 1))
+
+(define (timed-prime-test n)
+  (newline)
+  (display n)
+  (start-prime-test n (runtime)))
+(define (start-prime-test n start-time)
+  (if (fast-prime? n)
+    ((report-prime (- (runtime) start-time)) True)
+    (False)))
+
+(define (search-for-primes n count)
+  (define (search-for-primes-iter n count)
+    if (timed-prime-test n) 
+      (search-for-primes (+ n 1) (- count 1))
+      (search-for-primes (+ n 1) count))
+  (search-for-primes-iter n count))
